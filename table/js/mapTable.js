@@ -10,10 +10,10 @@ var mapRow = '<thead class="freeze_head">\
                      </tr>\
                   <tr>\
                      <th id="legend">\
-                        <span class="swatch" id="legal">Legal</span>\
+                        <span class="swatch" id="legal">Legalized</span>\
                         <span class="swatch" id="limbo">In limbo</span>\
                         <span class="swatch" id="banned">Banned</span>\
-                        <span class="swatch" id="bannedStrong">2+ bans</span>\
+                        <span class="swatch" id="bannedStrong">Ban upheld</span>\
                      </th>\
                   {#allMapColumns}\
                      <th>\
