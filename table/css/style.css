@@ -1,0 +1,192 @@
+/* generic table styles */
+table#mapTable {
+    table-layout:fixed;
+    padding: 0;
+    overflow: hidden;
+	margin-left: 0;
+	margin-right: 0;
+    clear: both;
+    border-collapse: separate;
+    font-family: Helvetica, sans-serif;
+}
+/* set width and style table cells */
+#mapTable th {
+    white-space: normal;
+    overflow:hidden;
+    position: relative;
+	width: 20%;
+	font-size: 11px;
+    padding: 0;
+    border: 1px solid #ffffff;
+    background: #f7f7f7;
+}
+/* map/table legend styles */
+#mapTable #legend {
+    vertical-align: top;
+}
+#mapTable .swatch {
+    display: block;
+    width: 64px;
+    height: 12px;
+    padding: 3px;
+    font-weight:400;
+    text-align: left;
+    font-size:10px;
+}
+/* column header and repeating column header styles */
+#mapTable thead th, #mapTable .mid_labels th  {
+    background: #ffffff;
+    padding: 3px;
+    font-size: 12px;
+}
+/* state column styles */
+#mapTable .state_name {
+    width: 5%;
+    padding: 3px;
+    text-align: right;
+    color: #222222;
+}
+/* table typeface styles */
+#mapTable p {
+	display: table-cell;
+	margin: 0 auto;
+	text-transform: none;
+	font-weight: normal;
+	padding: 3px 3px 3px 8px;
+	text-align: left;
+    word-break: break-word;
+}
+/* style svg maps */
+#mapTable svg path {
+    fill: #eeeeee;
+}
+#mapTable .svg_container {
+    position: relative;
+    padding-bottom: 62%;
+    height: 0;
+    overflow: hidden;
+}
+#mapTable .svg_container svg {
+    width: 75%;
+    height: 75%;
+}
+/* hide label for n/a empty cells */
+.inline_label {
+    display:none;
+}
+/* restrict width of state column*/
+th:nth-of-type(1) { 
+    display:table-cell;
+    width: 5%!Important;
+}
+
+/* optional state selector styles
+#jump_to_state select {
+
+    padding-left: .5em;
+    font-size: 14px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 2.3em;
+    -webkit-appearance: none;
+    font-weight: bold;
+    text-align: center;
+    color: #333315;
+    width: 11.4em;
+    font-family: verdana;
+
+}
+
+#jump_to_state {
+    background: #eeeeee;
+    float: left;
+    width: 12em;
+    overflow: hidden;
+    border: 2px solid #686868;
+    margin-bottom: 1.5em;
+}
+*/
+
+@media only screen and (max-width: 480px) {
+
+    #mapTable,
+    tbody, 
+    tr, 
+    #mapTable td, 
+    #mapTable th,
+    #mapTable tbody.state_name,
+    #mapTable th.legal,
+    #mapTable th.banned,
+    #mapTable th.limbo,
+    #mapTable th.bannedstrong { 
+        display: block !important; 
+        background:none;
+        width: 83%!important;
+        border:0;
+    }
+
+    table#mapTable {
+        width: 26em !important;
+    }
+
+    #mapTable {
+        table-layout: auto;
+    }
+
+    #mapTable .svg_container {
+        padding-bottom: 0; 
+    }
+
+    #mapTable th {
+		border: none;
+		text-align: left;
+		font-weight: normal;
+		line-height: 1.5em;
+		position: relative;
+		padding: 5px!important;
+		margin-bottom: 0px;
+    }
+
+    th:nth-of-type(2):before { content: "Constitutional amendment:"; font-weight: bold; color: #888; }
+    th:nth-of-type(3):before { content: "Court action: "; font-weight: bold; color: #888; }
+    th:nth-of-type(4):before { content: "Legislative action: "; font-weight: bold; color: #888; }
+    th:nth-of-type(5):before { content: "Popular vote: "; font-weight: bold; color: #888; }
+	
+	#mapTable .state_name {
+        font-weight: bold;
+	    text-transform:uppercase;
+        text-align:left;
+	}
+
+    #mapTable tr {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    #mapTable svg .legal, 
+    #mapTable svg .banned,
+    #mapTable svg .limbo,
+    #mapTable svg .bannedstrong {
+    background-color: transparent;
+        fill: transparent;
+    }
+
+    tr:nth-of-type(odd) { 
+        background: #f7f7f7; 
+    }
+
+    #mapTable thead,
+    #mapTable .mid_labels {
+        display:none!important;
+    }
+
+    #mapTable p {
+        padding: 0;
+		margin: 0!important;
+    }
+
+    .inline_label {
+        display: block;
+    }
+}
