@@ -13,7 +13,7 @@ var mapRow = '<thead class="freeze_head">\
                         <span class="swatch" id="legal">Legal</span>\
                         <span class="swatch" id="limbo">In limbo</span>\
                         <span class="swatch" id="banned">Banned</span>\
-                        <span class="swatch" id="bannedStrong">Banned 2+ ways</span>\
+                        <span class="swatch" id="bannedStrong">2+ bans</span>\
                      </th>\
                   {#allMapColumns}\
                      <th>\
