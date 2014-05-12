@@ -2,22 +2,22 @@
 /* desaturate map colors for the table cell backgrounds */
 #mapTable svg .legal, #mapTable .legal {
   fill: rgba(102, 194, 165, .9);
-  background: rgba(102, 194, 165, .7);
+  background: rgba(102, 194, 165, .5);
 }
 
 #mapTable svg .limbo, #mapTable .limbo {
   fill: rgba (204, 204, 204, 1);
-  background: rgba (204, 204, 204, 1);
+  background: rgba (204, 204, 204, .7);
 }
 
 #mapTable svg .banned, #mapTable .banned {
   fill: rgba(253, 174, 97, 1);
-  background: rgba(253, 174, 97, .7);
+  background: rgba(253, 174, 97, .5);
 }
 
 #mapTable svg .bannedstrong, #mapTable .bannedstrong {
   fill: rgba(244, 109, 67, .9);
-  background: rgba(244, 109, 67, .7);
+  background: rgba(244, 109, 67, .5);
 }
 /* specify colors for map legend */
 #mapTable #legal {
