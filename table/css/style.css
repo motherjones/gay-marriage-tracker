@@ -14,13 +14,6 @@ table#mapTable {
 /* column header and repeating column header styles */
 #mapTable thead th, #mapTable .mid_labels th  {
     background: #ffffff;
-    /* SUGGESTED FIX
-     * remove me
-     */
-    padding: 3px;
-    /* SUGGESTED FIX
-     * end remove me
-     */
     font-size: 15px;
 	text-align:center;
 }
@@ -32,17 +25,9 @@ table#mapTable {
     position: relative;
 	width: 20%;
 	border: 1px solid white;
-  /* SUGGESTED FIX 
 	min-width: 20%;
   display:block;
   float: left;
-  */
-  /*SUGGESTED FIX 
-   * remove this
-   */
-  /*SUGGESTED FIX 
-   * end remove this
-   */
 	font-size: 11px;
     padding: 0;
 }
@@ -79,9 +64,7 @@ table#mapTable {
 /* state column styles */
 #mapTable .state_name {
     width: 5%;
-    /* SUGGESTED FIX
-     * min-width: 10%;
-     */
+    min-width: 10%;
     padding: 3px;
     text-align: right;
     color: #222222;
@@ -91,9 +74,7 @@ table#mapTable {
 	th:nth-of-type(1) { 
     display:table-cell;
     width: 5%!Important;
-    /* SUGGESTED FIX
-     * min-width: 10%!important;
-     */
+    min-width: 10%!important;
 }
 
 
