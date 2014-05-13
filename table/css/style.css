@@ -74,6 +74,7 @@ table#mapTable {
     padding-bottom: 62%;
     height: 0;
     overflow: hidden;
+	margin-bottom: -25px;
 }
 #mapTable .svg_container svg {
     width: 75%;
