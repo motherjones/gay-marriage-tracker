@@ -31,15 +31,26 @@ table#mapTable {
     padding: 0;
 }
 
+#mapTable tr {
+   border-bottom: 1px solid white;
+}
+
+.stateRows  {
+	background:#f7f7f7;
+}
+.stateRows th {
+	height: 88px;
+	border-right: 1px solid white;
+}
+
 /* table typeface styles */
 #mapTable p {
 	display: table-cell;
 	margin: 0 auto;
-	text-transform: none;
 	font-weight: 600;
 	padding: 8px;
     word-break: break-word;
-	line-height: normal;
+	
 }
 
 /* map/table legend styles */
@@ -63,9 +74,9 @@ table#mapTable {
 #mapTable .state_name {
     width: 5%;
     min-width: 10%;
-    padding: 3px;
     text-align: right;
     color: #222222;
+	padding: 0 5px 0 0;
 }
 
 /* restrict width of state column*/
