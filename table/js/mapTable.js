@@ -88,6 +88,7 @@ dust.loadSource(compiledMapRow);
 var makeTable = function(data) {
 
 //write a Dust.js template for data table
+// SUGGESTED FIX <th>&nbsp;</th>\ instead of <th> </th>\
     var tableBody = '<tbody class="stateRows">\
                         {#allStates}\
                         {! write conditional statement to add law labels every 10 rows !}\
@@ -131,6 +132,9 @@ var makeTable = function(data) {
             } else if(state[params.column]) {
               return chunk.write('<th class="' + state.status + '"><p>' + state.details + '</p></th>');
             } else {
+              /* SUGGESTED FIX
+               * return chunk.write('<th>&nbsp;<span class="inline_label">Not at the moment</span></th>');
+               */
               return chunk.write('<th><span class="inline_label">Not at the moment</span></th>');
             }
         },
