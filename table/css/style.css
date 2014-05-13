@@ -6,7 +6,7 @@ table#mapTable {
 	margin-left: 0;
 	margin-right: 0;
     clear: both;
-    /* border-collapse: separate; in FF this causes me to ignore my boundries and stretch of the right side of the containing div */
+    border-collapse: collapse;
     font-family: Helvetica, sans-serif;
 	color: #292929;
 
@@ -17,6 +17,7 @@ table#mapTable {
     overflow:hidden;
     position: relative;
 	width: 20%;
+	border: 1px solid white;
   /* SUGGESTED FIX 
 	min-width: 20%;
   display:block;
@@ -30,7 +31,7 @@ table#mapTable {
    * end remove this
    */
 	font-size: 11px;
-  text-align: center;
+	text-align: center;
     padding: 0;
 }
 
