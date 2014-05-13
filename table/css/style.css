@@ -9,8 +9,22 @@ table#mapTable {
     border-collapse: collapse;
     font-family: Helvetica, sans-serif;
 	color: #292929;
-
 }
+
+/* column header and repeating column header styles */
+#mapTable thead th, #mapTable .mid_labels th  {
+    background: #ffffff;
+    /* SUGGESTED FIX
+     * remove me
+     */
+    padding: 3px;
+    /* SUGGESTED FIX
+     * end remove me
+     */
+    font-size: 15px;
+	text-align:center;
+}
+
 /* set width and style table cells */
 #mapTable th {
     white-space: normal;
@@ -18,46 +32,21 @@ table#mapTable {
     position: relative;
 	width: 20%;
 	border: 1px solid white;
+  /* SUGGESTED FIX 
 	min-width: 20%;
   display:block;
   float: left;
+  */
+  /*SUGGESTED FIX 
+   * remove this
+   */
+  /*SUGGESTED FIX 
+   * end remove this
+   */
 	font-size: 11px;
-	text-align: center;
     padding: 0;
 }
 
-#mapTable tr:hover {
-    background: #fff;
-}
-
-/* map/table legend styles */
-#mapTable #legend {
-  line-height: 12px;
-    vertical-align: top;
-	
-}
-#mapTable .swatch {
-    display: block;
-    width: 90%;
-    height: 12px;
-    padding: 3px;
-    font-weight:600;
-	text-align:center;
-    font-size:10px;
-}
-/* column header and repeating column header styles */
-#mapTable thead th, #mapTable .mid_labels th  {
-    background: #ffffff;
-    font-size: 15px;
-}
-/* state column styles */
-#mapTable .state_name {
-    width: 5%;
-    min-width: 10%;
-    padding: 3px;
-    text-align: right;
-    color: #222222;
-}
 /* table typeface styles */
 #mapTable p {
 	display: table-cell;
@@ -67,7 +56,48 @@ table#mapTable {
 	padding: 8px;
 	text-align: left;
     word-break: break-word;
+	line-height: normal;
 }
+
+/* map/table legend styles */
+#mapTable #legend {
+	line-height: 12px;
+    vertical-align: top;	
+}
+
+#mapTable .swatch {
+    display: block;
+    width: 90%;
+    height: 12px;
+    padding: 3px;
+    font-weight:600;
+	text-align:center;
+    font-size:10px;
+}
+
+
+/* state column styles */
+#mapTable .state_name {
+    width: 5%;
+    /* SUGGESTED FIX
+     * min-width: 10%;
+     */
+    padding: 3px;
+    text-align: right;
+    color: #222222;
+}
+
+/* restrict width of state column*/
+	th:nth-of-type(1) { 
+    display:table-cell;
+    width: 5%!Important;
+    /* SUGGESTED FIX
+     * min-width: 10%!important;
+     */
+}
+
+
+
 /* style svg maps */
 #mapTable svg path {
 	fill:rgba(224, 224, 224, 1);
@@ -89,14 +119,8 @@ table#mapTable {
     left: 15%;
 }
 /* hide label for n/a empty cells */
-.inline_label {
+	.inline_label {
     display:none;
-}
-/* restrict width of state column*/
-th:nth-of-type(1) { 
-    display:table-cell;
-    width: 5%!Important;
-    min-width: 10%!important;
 }
 
 /* optional state selector styles
