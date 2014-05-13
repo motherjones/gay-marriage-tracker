@@ -1,21 +1,21 @@
 /* specify svg map and data table color palette for this project's data categories */
 /* desaturate map colors for the table cell backgrounds */
 #mapTable svg .legal, #mapTable .legal, #mapTable #legal {
+  fill: rgba(67, 147, 195, .8);
+  background: rgba(67, 147, 195, .8);
+}
+
+#mapTable svg .limbo, #mapTable .limbo, #mapTable #limbo {
   fill: rgba(171, 217, 233, 1);
   background: rgba(171, 217, 233, 1);
 }
 
-#mapTable svg .limbo, #mapTable .limbo, #mapTable #limbo {
-  fill: rgba(224, 236, 244, 1);
-  background: rgba(224, 236, 244, 1);
-}
-
 #mapTable svg .banned, #mapTable .banned, #mapTable #banned {
-  fill: rgba(254, 224, 182, 1);
-  background: rgba(254, 224, 182, 1);
+  fill: rgba(244, 165, 130, 1);
+  background: rgba(244, 165, 130, 1);
 }
 
 #mapTable svg .bannedstrong, #mapTable #bannedstrong, #mapTable .bannedstrong {
-  fill:rgba(252, 146, 114, 1);
-  background: rgba(252, 146, 114, 1);
+  fill:rgba(214, 96, 77, 1);
+  background: rgba(214, 96, 77, 1);
 }

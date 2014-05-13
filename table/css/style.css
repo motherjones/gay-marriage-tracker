@@ -8,6 +8,8 @@ table#mapTable {
     clear: both;
     border-collapse: separate;
     font-family: Helvetica, sans-serif;
+	color: #292929;
+
 }
 /* set width and style table cells */
 #mapTable th {
@@ -17,7 +19,13 @@ table#mapTable {
 	width: 20%;
 	font-size: 11px;
     padding: 0;
+	background: #f7f7f7;
 }
+
+#mapTable tr:hover {
+    background: #fff;
+}
+
 /* map/table legend styles */
 #mapTable #legend {
     vertical-align: top;
@@ -36,7 +44,7 @@ table#mapTable {
 #mapTable thead th, #mapTable .mid_labels th  {
     background: #ffffff;
     padding: 3px;
-    font-size: 12px;
+    font-size: 15px;
 }
 /* state column styles */
 #mapTable .state_name {
@@ -50,15 +58,16 @@ table#mapTable {
 	display: table-cell;
 	margin: 0 auto;
 	text-transform: none;
-	font-weight: normal;
-	padding: 3px 3px 3px 8px;
+	font-weight: 600;
+	padding: 8px;
 	text-align: left;
     word-break: break-word;
 }
 /* style svg maps */
-#mapTable svg path, #mapTable th {
-    fill: rgba(238, 238, 238, .5);
-	background: rgba(238, 238, 238, .1);
+#mapTable svg path {
+	fill:rgba(224, 224, 224, 1);
+	
+
 }
 #mapTable .svg_container {
     position: relative;
