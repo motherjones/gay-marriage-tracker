@@ -1,21 +1,22 @@
 /* specify svg map and data table color palette for this project's data categories */
 /* desaturate map colors for the table cell backgrounds */
-#mapTable svg .legal, #mapTable .legal, #mapTable #legal {
+#mapTable svg .legal, #mapTable .legal, #mapTable #legal, #mapTable svg .Legal, #mapTable .Legal, #mapTable #Legal {
   fill: rgba(67, 147, 195, .8);
   background: rgba(67, 147, 195, .8);
 }
 
-#mapTable svg .limbo, #mapTable .limbo, #mapTable #limbo {
+#mapTable svg .limbo, #mapTable .limbo, #mapTable #limbo, #mapTable svg .Limbo, #mapTable .Limbo, #mapTable #Limbo {
   fill: rgba(171, 217, 233, 1);
   background: rgba(171, 217, 233, 1);
 }
 
-#mapTable svg .banned, #mapTable .banned, #mapTable #banned {
+#mapTable svg .banned, #mapTable .banned, #mapTable #banned, #mapTable svg .Banned, #mapTable .Banned, #mapTable #Banned {
   fill: rgba(244, 165, 130, 1);
   background: rgba(244, 165, 130, 1);
 }
 
-#mapTable svg .bannedstrong, #mapTable #bannedstrong, #mapTable .bannedstrong {
+#mapTable svg .bannedStrong, #mapTable #bannedStrong, #mapTable .bannedStrong, #mapTable svg .bannedstrong, #mapTable #bannedstrong, #mapTable .bannedstrong,
+#mapTable svg .BannedStrong, #mapTable #BannedStrong, #mapTable .BannedStrong, #mapTable svg .Bannedstrong, #mapTable #Bannedstrong, #mapTable .Bannedstrong {
   fill:rgba(214, 96, 77, 1);
   background: rgba(214, 96, 77, 1);
 }
