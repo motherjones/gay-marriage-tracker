@@ -5,7 +5,7 @@
 }
 
 #tracker header h4 {
-	margin:0 10px 0 0;
+	margin:.3em 1em 0 0;
 }
 
 #tracker header form {
@@ -26,9 +26,13 @@ table#mapTable {
 }
 
 /* column header and repeating column header styles */
-#mapTable thead th, #mapTable .mid_labels th  {
-    font-size: 15px;
-	text-align:center;
+#mapTable thead th  {
+	font-size: 15px;
+	text-align: center;
+	text-transform: none;
+	width: 2em;
+	line-height: normal;
+	margin-bottom: .5em;
 }
 
 /* set width and style table cells */
@@ -37,11 +41,21 @@ table#mapTable {
     overflow:hidden;
     position: relative;
 	width: 22%;
-	min-width: 20%;
+	min-width: 22%;
 	display:block;
 	float: left;
 	font-size: 11px;
     padding: 0;
+}
+
+#mapTable .mid_labels th {
+	
+	background: black;
+	height: 1em;
+	padding: 1em 0em;
+	color: white;
+	text-align:center;
+	
 }
 
 #mapTable tr {
