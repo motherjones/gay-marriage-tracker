@@ -35,10 +35,8 @@ table#mapTable {
    border-bottom: 1px solid white;
 }
 
-.stateRows  {
-	background:#f7f7f7;
-}
 .stateRows th {
+	background:#f7f7f7;
 	height: 88px;
 	border-right: 1px solid white;
 }
