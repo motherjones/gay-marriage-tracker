@@ -24,10 +24,9 @@ table#mapTable {
     overflow:hidden;
     position: relative;
 	width: 20%;
-	border: 1px solid white;
 	min-width: 20%;
-  display:block;
-  float: left;
+	display:block;
+	float: left;
 	font-size: 11px;
     padding: 0;
 }
@@ -39,7 +38,6 @@ table#mapTable {
 	text-transform: none;
 	font-weight: 600;
 	padding: 8px;
-	text-align: left;
     word-break: break-word;
 	line-height: normal;
 }

@@ -199,6 +199,6 @@ var makeTable = function(data) {
 
 //REQUIRE A CALL BEFORE TABLETOP INIT STARTS
 Tabletop.init( { 
-    proxy : 'https://s3.amazonaws.com/mj-tabletop-proxy',
+//    proxy : 'https://s3.amazonaws.com/mj-tabletop-proxy',
     key: public_spreadsheet_url, callback: makeTable, simpleSheet: true,
 } )
