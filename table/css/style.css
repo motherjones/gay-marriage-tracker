@@ -13,7 +13,6 @@ table#mapTable {
 
 /* column header and repeating column header styles */
 #mapTable thead th, #mapTable .mid_labels th  {
-    background: #ffffff;
     font-size: 15px;
 	text-align:center;
 }
@@ -23,7 +22,7 @@ table#mapTable {
     white-space: normal;
     overflow:hidden;
     position: relative;
-	width: 20%;
+	width: 22%;
 	min-width: 20%;
 	display:block;
 	float: left;
@@ -32,20 +31,22 @@ table#mapTable {
 }
 
 #mapTable tr {
-   border-bottom: 1px solid white;
+
 }
 
 .stateRows th {
 	background:#f7f7f7;
-	height: 88px;
+	height: 8em;
 	border-right: 1px solid white;
+	border-bottom: 1px solid white;
 }
 
 /* table typeface styles */
 #mapTable p {
 	display: table-cell;
 	margin: 0 auto;
-	font-weight: 600;
+	text-transform: none;
+	line-height:normal;
 	padding: 8px;
     word-break: break-word;
 	
