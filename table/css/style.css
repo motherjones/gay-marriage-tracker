@@ -1,4 +1,18 @@
 /* generic table styles */
+#tracker header {
+	margin: 0 0 1em 0;
+	display: -webkit-inline-box;
+}
+
+#tracker header h4 {
+	margin:0 10px 0 0;
+}
+
+#tracker header form {
+
+}
+
+
 table#mapTable {
     table-layout:fixed;
     padding: 0;
@@ -66,6 +80,8 @@ table#mapTable {
     font-weight:600;
 	text-align:center;
     font-size:10px;
+	text-transform:none;
+	font-weight:bold;
 }
 
 
@@ -112,33 +128,8 @@ table#mapTable {
     display:none;
 }
 
-/* optional state selector styles
-#jump_to_state select {
 
-    padding-left: .5em;
-    font-size: 14px;
-    line-height: 1;
-    border: 0;
-    border-radius: 0;
-    height: 2.3em;
-    -webkit-appearance: none;
-    font-weight: bold;
-    text-align: center;
-    color: #333315;
-    width: 11.4em;
-    font-family: verdana;
 
-}
-
-#jump_to_state {
-    background: #eeeeee;
-    float: left;
-    width: 12em;
-    overflow: hidden;
-    border: 2px solid #686868;
-    margin-bottom: 1.5em;
-}
-*/
 
 @media only screen and (max-width: 480px) {
 
