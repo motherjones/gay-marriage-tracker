@@ -1,0 +1,49 @@
+
+<div id="map_container">
+    <header>
+        <h2>Is Gay Marriage Legal In Your State</h2>
+        <p>The most recent status of gay marriage, across the US. Latest state to legalize highlighted below.</p>
+        <dl>
+            <dt class="Legal">item</dt>
+                <dd>Legal</dd>
+            <dt class="Banned">item</dt>
+                <dd>Banned </dd>
+            <dt class="Limbo">item</dt>
+                <dd>It's complicated</dd>
+            <dt class="Bannedstrong">item</dt>
+                <dd>Banned in two ways</dd>
+        </dl>
+    </header>
+    <section id="state_specific_area">
+        <h3 id="state_specific_headline">Headline here will be automagically replaced w/ state specific title</h3>
+        <p id="state_specific_body">Paragraph here will be automagically replaced w/ state specific text</p>
+    </section>  
+    <section>
+        <aside>
+            Source: LAMBDA
+        </aside>
+    </section>  
+</div>
+
+<link href="css/style.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,800' rel='stylesheet' type='text/css'>
+
+<script src="libs/jquery.js"></script>
+<script src="libs/tabletop.js"></script>	
+<script src="js/map_snippet.js"></script>	
+
+<script>
+    Tabletop.init({ 
+        //key: "YOUR KEY GOES HERE!!!! !!! 111 one eleven",
+        // This is a key for a quick demo. Only CA and TX do anything
+        key: "https://docs.google.com/spreadsheet/pub?key=0Aq7nL59nLsCMdDJxZUo4cFZaWGF5d0pSZU9XSE44NVE&output=html",
+        postProcess: function(element) {
+       //     delete element["rowNumber"];
+        },  
+        callback: function(data) {
+			color_map(data);
+			place_state_specific_data(data);
+        },
+        simpleSheet: true
+    });
+</script>
