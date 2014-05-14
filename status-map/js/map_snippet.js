@@ -37,8 +37,17 @@ var color_map = function(states) {
             class_to_add = ' clickable ' + state['class'];
         }
         var state_svg = map_svg.find('.' + state.abbr);
-        var new_class = state_svg.attr('class') + class_to_add;
-        state_svg.attr('class', new_class);	
+        var old_class = state_svg.attr('class');
+        if (typeof old_class === 'object') {
+          //an ancient version of jquery
+          old_class = old_class.baseVal;
+        }
+        var new_class = old_class + class_to_add;
+        if (typeof state_svg.attr('class') === 'object') {
+          state_svg.attr('class').baseVal = new_class;	
+        } else {
+          state_svg.attr('class', new_class);	
+        }
     }
 }
 var place_state_specific_data = function(states) {
