@@ -1,0 +1,275 @@
+/* begin full width template */
+#sidebar-right-inner { display: none!important; }
+#node-body-top p.clear-floats {clear: both; margin-top: 10px;}
+#content-area, #node-header-data {width: 960px;}
+#content-inner {border-right: none;}
+#sidebar-right {display: none;}
+p.author-bio, #block-block-49 {width: 960px;}
+#block-block-49 .block-inner, #newsletter-banner {width: 630px; margin: 0 auto;}
+#node-footer {width: 960px; margin: 0 auto;}
+#node-footer .comment-tool {margin-left: 520px;}
+#block-disqus-disqus_comments, #block-block-416 {width:960px;}
+
+#node-header-data {width: 280px; float:left;}
+#node-header-data p.byline {float: left; margin: 0; padding: 0.6em 3em 0 0; display: inline;}
+#node-header-data ul.article-tools {float: left; margin: 0; padding: 0.2em 0 0 0; display: inline;}
+#node-header-data div.comment-bar {float: left; margin: 0; padding: 0; display: inline;}
+p.dek, #dateline {display:none;}
+#node-body-top p.clear-floats {clear: both; margin-top: 10px;}
+#content-area, #node-header-data {width: 960px;}
+#content-inner {border-right: none;}
+#sidebar-right {margin-top: 1510px; margin-left: 660px; border-left: 2px dotted #CCDAD7;}
+p.author-bio, #block-block-49 {width: 620px;}
+div.node-master-image {display: none;}
+#node-body-break {float: none; width:630px;}
+
+#content-header {width: 960px;}
+#content-inner {width:960px;}
+#node-body-break {float: none;}
+#node-body-break #related-articles {width:630px;}
+#node-bottom-block {text-align: center;}
+/* end full width template */
+
+/* generic table styles */
+#tracker header {
+	margin: 0 0 1em 0;
+	display: -webkit-inline-box;
+}
+
+#tracker header h4 {
+	margin:.3em 1.5em 0 0;
+}
+
+#tracker header form {
+
+}
+
+
+table#mapTable {
+    table-layout:fixed;
+    padding: 0;
+    overflow: hidden;
+	margin-left: 0;
+	margin-right: 0;
+    clear: both;
+    border-collapse: collapse;
+    font-family: Helvetica, sans-serif;
+	color: #292929;
+}
+
+/* column header and repeating column header styles */
+#mapTable thead th, #mapTable .mid_labels th  {
+	font-size: 15px;
+	text-align: center;
+	text-transform: none;
+	width: 2em;
+	line-height: normal;
+	margin-bottom: .5em;
+}
+
+/* set width and style table cells */
+#mapTable th {
+    white-space: normal;
+    overflow:hidden;
+    position: relative;
+	width: 22%;
+	min-width: 22%;
+	display:block;
+	float: left;
+	font-size: 11px;
+    padding: 0;
+}
+
+#mapTable tr {
+
+}
+
+.stateRows th {
+	background:#f7f7f7;
+	height: 8em;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+/* table typeface styles */
+#mapTable p {
+	display: table-cell;
+	margin: 0 auto;
+	text-transform: none;
+	line-height:normal;
+	padding: 8px;
+    word-break: break-word;
+	
+}
+
+/* map/table legend styles */
+#mapTable #legend {
+	line-height: 12px;
+    vertical-align: top;	
+}
+
+#mapTable .swatch {
+    display: block;
+    width: 90%;
+    height: 12px;
+    padding: 3px;
+    font-weight:600;
+	text-align:center;
+    font-size:10px;
+	text-transform:none;
+	font-weight:bold;
+}
+
+
+/* state column styles */
+#mapTable .state_name {
+    width: 5%;
+    min-width: 10%;
+    text-align: right;
+    color: #222222;
+	padding: 0 5px 0 0;
+	font-weight:lighter;
+}
+
+/* restrict width of state column*/
+	th:nth-of-type(1) { 
+    display:table-cell;
+    width: 5%!Important;
+    min-width: 10%!important;
+}
+
+
+
+/* style svg maps */
+#mapTable svg path {
+	fill:rgba(224, 224, 224, 1);
+	
+
+}
+#mapTable .svg_container {
+    position: relative;
+    padding-bottom: 62%;
+    height: 0;
+    overflow: hidden;
+	margin-bottom: -25px;
+}
+#mapTable .svg_container svg {
+    width: 75%;
+    height: 75%;
+    /* FIX for FF keep the svg near the th */
+    position: absolute;
+    left: 15%;
+}
+/* hide label for n/a empty cells */
+	.inline_label {
+    display:none;
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+
+    #mapTable,
+    tbody, 
+    tr, 
+    #mapTable td, 
+    #mapTable th,
+    #mapTable tbody.state_name,
+    #mapTable th.legal,
+    #mapTable th.banned,
+    #mapTable th.limbo,
+    #mapTable th.bannedstrong { 
+        display: block !important; 
+        background:none;
+        width: 83%!important;
+        border:0;
+    }
+
+    table#mapTable {
+        width: 26em !important;
+    }
+
+    #mapTable {
+        table-layout: auto;
+    }
+
+    #mapTable .svg_container {
+        padding-bottom: 0; 
+    }
+
+    #mapTable th {
+		border: none;
+		text-align: left;
+		font-weight: normal;
+		line-height: 1.5em;
+		position: relative;
+		padding: 5px!important;
+		margin-bottom: 0px;
+    }
+
+    th:nth-of-type(2):before { content: "Constitutional amendment:"; font-weight: bold; color: #888; }
+    th:nth-of-type(3):before { content: "Court action: "; font-weight: bold; color: #888; }
+    th:nth-of-type(4):before { content: "Legislative action: "; font-weight: bold; color: #888; }
+    th:nth-of-type(5):before { content: "Popular vote: "; font-weight: bold; color: #888; }
+	
+	#mapTable .state_name {
+        font-weight: bold;
+	    text-transform:uppercase;
+        text-align:left;
+	}
+
+    #mapTable tr {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    #mapTable svg .legal, 
+    #mapTable svg .banned,
+    #mapTable svg .limbo,
+    #mapTable svg .bannedstrong {
+    background-color: transparent;
+        fill: transparent;
+    }
+
+    tr:nth-of-type(odd) { 
+        background: #f7f7f7; 
+    }
+
+    #mapTable thead,
+    #mapTable .mid_labels {
+        display:none!important;
+    }
+
+    #mapTable p {
+        padding: 0;
+		margin: 0!important;
+    }
+
+    .inline_label {
+        display: block;
+    }
+}
+
+/* specify svg map and data table color palette for this project's data categories */
+/* desaturate map colors for the table cell backgrounds */
+#mapTable svg .legal, #mapTable .legal, #mapTable #legal, #mapTable svg .Legal, #mapTable .Legal, #mapTable #Legal {
+  fill: rgba(67, 147, 195, .8);
+  background: rgba(67, 147, 195, .8);
+}
+
+#mapTable svg .limbo, #mapTable .limbo, #mapTable #limbo, #mapTable svg .Limbo, #mapTable .Limbo, #mapTable #Limbo {
+  fill: rgba(171, 217, 233, 1);
+  background: rgba(171, 217, 233, 1);
+}
+
+#mapTable svg .banned, #mapTable .banned, #mapTable #banned, #mapTable svg .Banned, #mapTable .Banned, #mapTable #Banned {
+  fill: rgba(244, 165, 130, 1);
+  background: rgba(244, 165, 130, 1);
+}
+
+#mapTable svg .bannedStrong, #mapTable #bannedStrong, #mapTable .bannedStrong, #mapTable svg .bannedstrong, #mapTable #bannedstrong, #mapTable .bannedstrong,
+#mapTable svg .BannedStrong, #mapTable #BannedStrong, #mapTable .BannedStrong, #mapTable svg .Bannedstrong, #mapTable #Bannedstrong, #mapTable .Bannedstrong {
+  fill:rgba(214, 96, 77, 1);
+  background: rgba(214, 96, 77, 1);
+}

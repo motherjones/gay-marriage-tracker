@@ -6,7 +6,7 @@ var mapRow = '<thead class="freeze_head">\
                         <span class="swatch" id="legal">Legalized</span>\
                         <span class="swatch" id="limbo">In limbo</span>\
                         <span class="swatch" id="banned">Banned</span>\
-                        <span class="swatch" id="bannedStrong">Ban upheld</span>\
+                        <span class="swatch" id="bannedStrong">Double ban</span>\
                      </th>\
                     <th colspan="4" style="width: 90%">\
                       <table style="width:100%">\
