@@ -105,7 +105,7 @@ var makeTable = function(data) {
                                 <th>Popular vote</th>\
                             </tr>\
                         {/if}\
-                        <tr id={postal}_row>\
+                        <tr id={abbr}_row>\
                             <th class=state_name>\
                                 {state}\
                             </th>\
@@ -146,7 +146,7 @@ var makeTable = function(data) {
             // params.state == this is the postal code of the state
             var state = _.find(data, function(row) { 
                 //return the first row where the state name of the row is the same as the param that we passed in for state
-                return(row.postal === params.state);
+                return(row.abbr === params.state);
             });
 
             if(state[params.column]) {
@@ -179,7 +179,7 @@ var makeTable = function(data) {
     var select = '<select>\
                     <option value=""> Jump to a state:</option>\
                     {#allStates}\
-                        <option value="{postal}">\
+                        <option value="{abbr}">\
                             {state}\
                         </option>\
                     {/allStates}\
