@@ -132,9 +132,9 @@ var makeTable = function(data) {
             });
 
             if(params.column === 'constitutionalamendment' && state.constitutionalamendment){
-              return chunk.write('<th class="' + state.status + '"><p>' + state.conamendmentdetails + '</p></th>');
+              return chunk.write('<th class="' + state.class + '"><p>' + state.conamendmentdetails + '</p></th>');
             } else if(state[params.column]) {
-              return chunk.write('<th class="' + state.status + '"><p>' + state.details + '</p></th>');
+              return chunk.write('<th class="' + state.class + '"><p>' + state.details + '</p></th>');
             } else {
               return chunk.write('<th>&nbsp;<span class="inline_label">Not at the moment</span></th>');
               //return chunk.write('<th><span class="inline_label">Not at the moment</span></th>');
@@ -150,7 +150,7 @@ var makeTable = function(data) {
             });
 
             if(state[params.column]) {
-              return chunk.write(state.status);
+              return chunk.write(state.class);
             } else {
               return chunk.write('');
             }
