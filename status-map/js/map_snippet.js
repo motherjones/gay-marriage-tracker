@@ -5,16 +5,17 @@ var super_simple_map = function(options) {
     state_specific_area.before(map_svg);
     var remove_previously_selected = function() {
         var previously_selected = map_svg.find('.selected');
-        if (!previously_selected.length) { return; }
-        var previous_class = previously_selected.attr('class') || '';
-        if (typeof previous_class !== 'string') {
-          var old_class = previous_class.baseVal;
-          var new_class = old_class.replace('selected', '');
-          previously_selected.attr('class').baseVal = new_class;
-        } else {
-          var new_class = previous_class.replace('selected', '');
-          previously_selected.attr('class', new_class);
-        }
+        previously_selected.each(function() {
+            var $this = $(this);
+            var previous_class = $this.attr('class') || '';
+            if (typeof previous_class !== 'string') {
+                $this.get(0).setAttribute('class',
+                    $this.get(0).getAttribute('class').replace('selected', '')
+                );
+            } else {
+              $this.attr('class', previous_class.replace('selected', ''));
+            }
+        });
     }
 
 
@@ -50,12 +51,11 @@ var super_simple_map = function(options) {
             var old_class = state_svg.attr('class');
             if (typeof old_class !== 'string') {
               //an ancient version of jquery
-              old_class = old_class.baseVal;
-            }
-            var new_class = old_class + class_to_add;
-            if (typeof state_svg.attr('class') === 'object') {
-              state_svg.attr('class').baseVal = new_class;	
+              state_svg.get(0).setAttribute('class',
+                  state_svg.get(0).getAttribute('class') + class_to_add
+              );
             } else {
+              var new_class = old_class + class_to_add;
               state_svg.attr('class', new_class);	
             }
         }
@@ -91,8 +91,9 @@ var super_simple_map = function(options) {
                 var state = jQuery(event.target);
                 previous_class = state.attr('class');
                 if (typeof previous_class !== 'string') {
-                  var old_class = previous_class.baseVal;
-                  previously_selected.attr('class').baseVal = old_class + ' selected';
+                  state.get(0).setAttribute('class',
+                      state.get(0).getAttribute('class') + ' selected'
+                  );
                 } else {
                   new_class = previous_class + ' selected';
                   state.attr('class', new_class);				
