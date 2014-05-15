@@ -4,10 +4,15 @@ var super_simple_map = function(options) {
     var state_specific_area = jQuery('#' + options.container);
     state_specific_area.before(map_svg);
     var remove_previously_selected = function() {
-        var previously_selected = jQuery('.selected');
+        var previously_selected = map_svg.find('.selected');
         var previous_class = previously_selected.attr('class') || '';
-        var new_class = previous_class.replace('selected', '');
-        previously_selected.attr('class', new_class);
+        if (typeof previous_class === 'object') {
+          var new_class = previous_class.baseVal.replace('selected', '');
+          previously_selected.attr('class').baseVal = new_class;
+        } else {
+          var new_class = previous_class.replace('selected', '');
+          previously_selected.attr('class', new_class);
+        }
     }
 
 
