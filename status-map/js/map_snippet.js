@@ -5,9 +5,11 @@ var super_simple_map = function(options) {
     state_specific_area.before(map_svg);
     var remove_previously_selected = function() {
         var previously_selected = map_svg.find('.selected');
+        if (!previously_selected.length) { return; }
         var previous_class = previously_selected.attr('class') || '';
-        if (typeof previous_class === 'object') {
-          var new_class = previous_class.baseVal.replace('selected', '');
+        if (typeof previous_class !== 'string') {
+          var old_class = previous_class.baseVal;
+          var new_class = old_class.replace('selected', '');
           previously_selected.attr('class').baseVal = new_class;
         } else {
           var new_class = previous_class.replace('selected', '');
@@ -46,7 +48,7 @@ var super_simple_map = function(options) {
             }
             var state_svg = map_svg.find('.' + state.abbr);
             var old_class = state_svg.attr('class');
-            if (typeof old_class === 'object') {
+            if (typeof old_class !== 'string') {
               //an ancient version of jquery
               old_class = old_class.baseVal;
             }
@@ -88,8 +90,13 @@ var super_simple_map = function(options) {
                 remove_previously_selected();
                 var state = jQuery(event.target);
                 previous_class = state.attr('class');
-                new_class = previous_class + ' selected';
-                state.attr('class', new_class);				
+                if (typeof previous_class !== 'string') {
+                  var old_class = previous_class.baseVal;
+                  previously_selected.attr('class').baseVal = old_class + ' selected';
+                } else {
+                  new_class = previous_class + ' selected';
+                  state.attr('class', new_class);				
+                }
             });
         }
     }
