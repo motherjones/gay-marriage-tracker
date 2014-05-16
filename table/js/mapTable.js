@@ -8,17 +8,17 @@ var mapRow = '<thead class="freeze_head">\
                         <span class="swatch" id="banned">Banned</span>\
                         <span class="swatch" id="bannedStrong">Double ban</span>\
                      </th>\
-                    <th colspan="4" style="width: 90%">\
+                    <th colspan="4" style="width: 88%">\
                       <table style="width:100%">\
                       <tr>\
-                     <th style="min-width: 22.4%!important">Constitutional amendment</th>\
-                     <th style="min-width: 22.4%!important">Court action</th>\
-                     <th style="min-width: 22.4%!important">Legislative action</th>\
-                     <th style="min-width: 22.4%!important">Popular vote</th>\
+                     <th style="min-width: 25%!important">Constitutional amendment</th>\
+                     <th style="min-width: 25%!important">Court action</th>\
+                     <th style="min-width: 25%!important">Legislative action</th>\
+                     <th style="min-width: 25%!important">Popular vote</th>\
                   </tr>\
                   <tr>\
                   {#allMapColumns}\
-                     <th style="min-width: 22.4%!important; top: 4%;">\
+                     <th style="min-width: 25%!important;">\
                       <div class="svg_container">\
 <svg id="{column}Map" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 959 593">\
 <path d="m 233.08751,519.30948 1.93993,-3.55655 2.26326,-0.32332 0.32332,0.8083 -2.1016,3.07157 -2.42491,0 z m 10.18466,-3.71821 6.14313,2.58657 2.10159,-0.32332 1.61661,-3.87987 -0.64664,-3.39488 -4.2032,-0.48498 -4.04153,1.77827 -0.96996,3.71821 z m 30.71563,10.023 3.7182,5.49647 2.42492,-0.32332 1.13163,-0.48498 1.45495,1.29329 3.71821,-0.16166 0.96997,-1.45495 -2.90991,-1.77827 -1.93993,-3.71822 -2.1016,-3.55654 -5.8198,2.9099 -0.64664,1.77828 z m 20.20765,8.89137 1.29329,-1.93994 4.68817,0.96996 0.64665,-0.48498 6.14312,0.64664 -0.32332,1.2933 -2.58658,1.45494 -4.36485,-0.32332 -5.49648,-1.6166 z m 5.33482,5.17315 1.93994,3.87987 3.07155,-1.13163 0.32333,-1.61662 -1.61661,-2.10159 -3.71821,-0.32332 0,1.29329 z m 6.95143,-1.13163 2.26326,-2.9099 4.68817,2.42492 4.36485,1.13163 4.36486,2.74824 0,1.93993 -3.55654,1.77828 -4.84985,0.96996 -2.42491,-1.45495 -4.84984,-6.62811 z m 16.65111,15.51947 1.61661,-1.29328 3.39489,1.61662 7.59807,3.55654 3.39489,2.10159 1.6166,2.42492 1.93994,4.36485 4.04153,2.58658 -0.32332,1.2933 -3.87987,3.23322 -4.20319,1.45495 -1.45495,-0.64664 -3.07157,1.77826 -2.42491,3.23323 -2.26326,2.9099 -1.77828,-0.16166 -3.55654,-2.58658 -0.32332,-4.52651 0.64664,-2.42492 -1.61661,-5.65814 -2.1016,-1.77828 -0.16166,-2.58658 2.26326,-0.96996 2.1016,-3.07156 0.48498,-0.96997 -1.61661,-1.77828 -0.32332,-2.1016 z" class="HI state {#getMapClass column=column state="HI" /}" />\
