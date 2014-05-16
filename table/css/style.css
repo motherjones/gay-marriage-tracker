@@ -1,4 +1,16 @@
-/* generic table styles */
+/* global and table styles */
+table#mapTable {
+    table-layout:fixed;
+    padding: 0;
+    overflow: hidden;
+	margin-left: 0;
+	margin-right: 0;
+    clear: both;
+    border-collapse: collapse;
+    font-family: Helvetica, sans-serif;
+	color: #292929;
+
+}
 #tracker header {
 	margin: 0 0 1em 0;
 	display: -webkit-inline-box;
@@ -10,19 +22,6 @@
 
 #tracker header form {
 
-}
-
-
-table#mapTable {
-    table-layout:fixed;
-    padding: 0;
-    overflow: hidden;
-	margin-left: 0;
-	margin-right: 0;
-    clear: both;
-    border-collapse: collapse;
-    font-family: Helvetica, sans-serif;
-	color: #292929;
 }
 
 /* column header and repeating column header styles */

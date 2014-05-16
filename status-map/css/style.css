@@ -45,10 +45,9 @@ opacity: .5;
 
 /* tooltips */
 #map_container #state_specific_area {
-    width:40%;
+    width:90%;
     margin: 0 auto;
     min-height: 7em;
-    text-align: center;
     background: #f7f7f7;
     padding: 1em;
 }
