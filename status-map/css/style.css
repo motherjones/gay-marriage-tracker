@@ -1,4 +1,38 @@
-/* global */
+/* begin full width template */
+#sidebar-right-inner { display: none!important; }
+#node-body-top p.clear-floats {clear: both; margin-top: 10px;}
+#content-area, #node-header-data {width: 960px;}
+#content-inner {border-right: none;}
+#sidebar-right {display: none;}
+p.author-bio, #block-block-49 {width: 960px;}
+#block-block-49 .block-inner, #newsletter-banner {width: 630px; margin: 0 auto;}
+#node-footer {width: 960px; margin: 0 auto;}
+#node-footer .comment-tool {margin-left: 520px;}
+#block-disqus-disqus_comments, #block-block-416 {width:960px;}
+
+#node-header-data {width: 280px; float:left;}
+#node-header-data p.byline {float: left; margin: 0; padding: 0.6em 3em 0 0; display: inline;}
+#node-header-data ul.article-tools {float: left; margin: 0; padding: 0.2em 0 0 0; display: inline;}
+#node-header-data div.comment-bar {float: left; margin: 0; padding: 0; display: inline;}
+p.dek, #dateline {display:none;}
+#node-body-top p.clear-floats {clear: both; margin-top: 10px;}
+#content-area, #node-header-data {width: 960px;}
+#content-inner {border-right: none;}
+#sidebar-right {margin-top: 1510px; margin-left: 660px; border-left: 2px dotted #CCDAD7;}
+p.author-bio, #block-block-49 {width: 620px;}
+div.node-master-image {display: none;}
+#node-body-break {float: none; width:630px;}
+
+#content-header {width: 960px;}
+#content-inner {width:960px;}
+#node-body-break {float: none;}
+#node-body-break #related-articles {width:630px;}
+#node-bottom-block {text-align: center;}
+/* end full width template */
+
+
+
+/* svg map tracker global */
 #map_container {
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
     margin: 0 auto;
@@ -14,13 +48,21 @@
 
 /* map */
 #map_container svg {
-    width: 100%;
-    max-height: 100%;
+width: 80%;
+max-height: 100%;
+display: block;
+margin: auto;
+padding-bottom: 1.5em;
 }
 
 /* header and legend */
+
+#map_container header {
+    text-align: center
+}
 #map_container h2 {
     font-weight: bold;
+font-size:2.5em;
 }
 #map_container dl {
     margin-top: .6em;
@@ -48,7 +90,6 @@ opacity: .5;
 #map_container #state_specific_area {
     width:90%;
     margin: 0 auto;
-    min-height: 7em;
     background: #f7f7f7;
     padding: 1em;
 }
@@ -86,23 +127,42 @@ opacity: .5;
 
 
 /*  project-specific styles */
-#map_container .Legal {	
-	fill:#69A9C5;
-    background:#69A9C5;
-    color: #69A9C5;
+#map_container .Legal { 
+    fill:#03436A;
+    background:#03436A;
+    color: #03436A;
 }
-#map_container .Banned {
-	fill: #F4A582;
-    background:#F4A582;
-    color:#F4A582;
+#map_container .Appeal { 
+    fill:#3D9AD1;
+    background:#3D9AD1;
+    color:#3D9AD1;
 }
-#map_container .Limbo {	
-	fill:#ABD9E9;
-    background:#ABD9E9;
-    color:#ABD9E9;
+#map_container .Challenged {
+    fill: #FFA940;
+    background:#FFA940;
+    color:#FFA940;
 }
-#map_container .Bannedstrong { 
-    fill:#D6604D;
-    background:#D6604D;
-    color:#D6604D;
+#map_container .Banned { 
+    fill:#A65B00;
+    background:#A65B00;
+    color:#A65B00;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 568px) {
+
+#map_container h2 {
+        font-size: 1.1em;
+    }
+}
+
+/* mobile portrait mode styles */
+@media only screen and (max-width: 320px) 
+and (orientation : portrait) {
+#map_container h2 {
+        font-size: 1.1em;
+    }
+#map_container svg {
+width: 100%;
+}
 }
